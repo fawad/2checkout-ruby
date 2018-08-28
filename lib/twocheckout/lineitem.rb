@@ -7,7 +7,7 @@ module Twocheckout
     end
 
     def active?
-      self.billing.recurring_status == 'active'
+      self.billing.recurring_status == 'active' || self.billing.recurring_status == 'completed'
     end
 
     def stop_recurring!
